@@ -9,6 +9,13 @@ images
         /* definition des images */
         image: "bg.png" COMP;
         image: "final.png" COMP;
-        image: "shadow.png" FRAME;
-        image: "bloom.png" FRAME;
+        image: "shadow.png" FRAMELOGO;
+        image: "bloom.png" FRAMELOGO;
+        image: "reflect_001.png" FRAMEEFFECT;
+        image: "reflect_002.png" FRAMEEFFECT;
+        image: "reflect_003.png" FRAMEEFFECT;
+        image: "reflect_004.png" FRAMEEFFECT;
+        image: "reflect_005.png" FRAMEEFFECT;
+        image: "reflect_006.png" FRAMEEFFECT;
+        image: "reflect_007.png" FRAMEEFFECT;
 }
