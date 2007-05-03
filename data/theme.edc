@@ -105,6 +105,9 @@ collections {
         description {
           state: "default" 0.0;
           image { normal: "neonlight.png"; }
+          fill {
+                origin.relative: 0.0 0.0;
+          }
           color: 255 255 255 0;
           rel1.to: "neonclip";
           rel2.to: "neonclip";
@@ -112,9 +115,17 @@ collections {
         description {
           state: "neonon" 0.0;
           image { normal: "neonlight.png"; }
+          fill {
+                origin.relative: 1.0 0.0;
+          }
           color: 255 255 255 255;
           rel1.to: "neonclip";
           rel2.to: "neonclip";
+        }
+        description {
+          state: "neononloop" 0.0;
+          inherit: "default" 0.0;
+          color: 255 255 255 255;
         }
       }
 
@@ -374,8 +385,16 @@ collections {
       program {
         name, "neon.in";
         action, STATE_SET "neonon" 0.0;
-        transition, ACCELERATE 0.2;
+        transition, LINEAR 4.0;
         target, "neonlight";
+        after: "neon.loop";
+      }
+      program {
+        name, "neon.loop";
+        action, STATE_SET "neononloop" 0.0;
+        transition, LINEAR 0.000001;
+        target, "neonlight";
+        after: "neon.in";
       }
       program {
         name, "shadow.in";
