@@ -48,25 +48,74 @@ collections {
         }
       }
 
-      part
-      {
-                name: "clip";
-                type: RECT;
-                description
-                {
-                        state: "default" 0.0;
-                        visible: 0;
-                        rel1
-                        {
-                                relative: 0.5  0.393;
-                                offset: -250   -50;
-                        }
-                        rel2
-                        {
-                                relative: 0.5  0.393;
-                                offset: 249    49;
-                        }
-                }
+      part {
+        name: "logoclip";
+        type: RECT;
+        description {
+          state: "default" 0.0;
+          visible: 0;
+          rel1 {
+            relative: 0.5  0.393;
+            offset: -250   -50;
+          }
+          rel2 {
+            relative: 0.5  0.393;
+            offset: 249    49;
+          }
+        }
+      }
+
+      part {
+        name: "logomirrorclip";
+        type: RECT;
+        description {
+          state: "default" 0.0;
+          visible: 0;
+          rel1 {
+            relative: 0.5  0.490;
+            offset: -250   -50;
+          }
+          rel2 {
+            relative: 0.5  0.490;
+            offset: 249    49;
+          }
+        }
+      }
+
+      part {
+        name: "neonclip";
+        type: RECT;
+        description {
+          state: "default" 0.0;
+          visible: 0;
+          rel1 {
+            relative: 0.5  0.390;
+            offset: -512   0;
+          }
+          rel2 {
+            relative: 0.5  0.390;
+            offset: 511    4;
+          }
+        }
+      }
+
+      part {
+        name: "neonlight";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          image { normal: "neonlight.png"; }
+          color: 255 255 255 0;
+          rel1.to: "neonclip";
+          rel2.to: "neonclip";
+        }
+        description {
+          state: "neonon" 0.0;
+          image { normal: "neonlight.png"; }
+          color: 255 255 255 255;
+          rel1.to: "neonclip";
+          rel2.to: "neonclip";
+        }
       }
 
       part {
@@ -77,16 +126,16 @@ collections {
           visible: 0;
           color: 255 255 255 0;
           image { normal: "shadow.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "shadowin" 0.0;
           visible: 1;
           color: 255 255 255 255;
           image { normal: "shadow.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
       }
 
@@ -98,8 +147,8 @@ collections {
           image {
             normal: "0001.png";
           }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "animationin" 0.0;
@@ -171,8 +220,8 @@ collections {
             tween: "0064.png";
             tween: "0065.png";
           }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
       }
 
@@ -184,24 +233,45 @@ collections {
           visible: 0;
           color: 255 255 255 0;
           image { normal: "final.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "finalin" 0.0;
           visible: 1;
           color: 255 255 255 255;
           image { normal: "final.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "finalout" 0.0;
           visible: 0;
           color: 255 255 255 0;
           image { normal: "final.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
+        }
+      }
+
+      part {
+        name: "logomirror";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          visible: 1;
+          color: 255 255 255 0;
+          image { normal: "logo_mirror.png"; }
+          rel1.to: "logomirrorclip";
+          rel2.to: "logomirrorclip";
+        }
+        description {
+          state: "logomirrorin" 0.0;
+          visible: 1;
+          color: 255 255 255 6;
+          image { normal: "logo_mirror.png"; }
+          rel1.to: "logomirrorclip";
+          rel2.to: "logomirrorclip";
         }
       }
 
@@ -213,24 +283,24 @@ collections {
           visible: 0;
           color: 255 255 255 0;
           image { normal: "bloom.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "bloomon" 0.0;
           visible: 1;
           color: 255 255 255 255;
           image { normal: "bloom.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "bloomout" 0.0;
           visible: 0;
           color: 255 255 255 0;
           image { normal: "bloom.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
       }
       part {
@@ -239,10 +309,10 @@ collections {
         description {
           state: "default" 0.0;
           visible: 0;
-          color: 255 255 255 0;
+          color: 255 255 255 100;
           image { normal: "reflect_007.png"; }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state: "reflecton" 0.0;
@@ -257,8 +327,8 @@ collections {
             tween: "reflect_006.png";
             tween: "reflect_007.png";
           }
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
       }
       part {
@@ -269,16 +339,16 @@ collections {
           rel2 { relative, 1.0 1.0; offset, 5 75; }
           text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16; }
           color, 138 138 138 0;
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
         description {
           state, "accueilon" 0.0;
           rel2 { relative, 1.0 1.0; offset, 5 75; }
           text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16; }
           color, 138 138 138 255;
-          rel1.to: "clip";
-          rel2.to: "clip";
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
         }
      }
     }
@@ -288,29 +358,36 @@ collections {
         signal, "show";
         source, "";
         action, STATE_SET "visible" 0.0;
-        transition, DECELERATE 0.9;
+        transition, DECELERATE 0.4;
         target, "background";
         after: "animation.in";
       }
       program {
         name, "animation.in";
         action, STATE_SET "animationin" 0.0;
-        transition, LINEAR 3.0;
+        transition, LINEAR 2.5;
         target, "animation";
         after: "shadow.in";
         after: "bloom.in";
+        after: "neon.in";
+      }
+      program {
+        name, "neon.in";
+        action, STATE_SET "neonon" 0.0;
+        transition, ACCELERATE 0.2;
+        target, "neonlight";
       }
       program {
         name, "shadow.in";
         action, STATE_SET "shadowin" 0.0;
-        transition, SINUSOIDAL 0.3;
+        transition, SINUSOIDAL 0.2;
         target, "shadow";
       }
       program {
         name, "bloom.in";
         in: 0.2 0.0;
         action, STATE_SET "bloomon" 0.0;
-        transition, ACCELERATE 0.5;
+        transition, ACCELERATE 0.2;
         target, "bloom";
         after: "bloom.out";
         after: "animation.final";
@@ -318,35 +395,42 @@ collections {
       program {
         name, "bloom.out";
         action, STATE_SET "bloomout" 0.0;
-        transition, DECELERATE 0.6;
+        transition, DECELERATE 0.5;
         target, "bloom";
       }
       program {
         name, "animation.final";
         in: 0.1 0.0;
         action, STATE_SET "finalin" 0.0;
-        transition, DECELERATE 1.2;
+        transition, DECELERATE 0.5;
         target, "final";
         after: "reflect.in";
+        after: "mirror.in";
+      }
+      program {
+        name, "mirror.in";
+        action, STATE_SET "logomirrorin" 0.0;
+        transition, DECELERATE 0.9;
+        target, "logomirror";
       }
       program {
         name, "reflect.in";
         action, STATE_SET "reflecton" 0.0;
-        transition, ACCELERATE 0.5;
+        transition, ACCELERATE 0.2;
         target, "reflect";
         after: "reflect.out";
       }
       program {
         name, "reflect.out";
         action, STATE_SET "default" 0.0;
-        transition, ACCELERATE 0.0;
+        transition, DECELERATE 0.0;
         target, "reflect";
         after: "accueil.in";
       }
       program {
         name, "accueil.in";
         action, STATE_SET "accueilon" 0.0;
-        transition, DECELERATE 4.0;
+        transition, DECELERATE 1.0;
         target, "accueil";
       }
       //prog pour remettre a l'etat initial lorsque l'element est "cache"
@@ -362,6 +446,7 @@ collections {
         target, "final";
         target, "reflect";
         target, "accueil";
+        target, "neonlight";
       }
     }
   }
