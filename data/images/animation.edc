@@ -1,0 +1,71 @@
+// Calaos Logo Animation
+// BOEHLER Frederic
+// 02/05/2007
+
+images {
+  image: "0001.png" LOSSY 85;
+  image: "0002.png" LOSSY 85;
+  image: "0003.png" LOSSY 85;
+  image: "0004.png" LOSSY 85;
+  image: "0005.png" LOSSY 85;
+  image: "0006.png" LOSSY 85;
+  image: "0007.png" LOSSY 85;
+  image: "0008.png" LOSSY 85;
+  image: "0009.png" LOSSY 85;
+  image: "0010.png" LOSSY 85;
+  image: "0011.png" LOSSY 85;
+  image: "0012.png" LOSSY 85;
+  image: "0013.png" LOSSY 85;
+  image: "0014.png" LOSSY 85;
+  image: "0015.png" LOSSY 85;
+  image: "0016.png" LOSSY 85;
+  image: "0017.png" LOSSY 85;
+  image: "0018.png" LOSSY 85;
+  image: "0019.png" LOSSY 85;
+  image: "0020.png" LOSSY 85;
+  image: "0021.png" LOSSY 85;
+  image: "0022.png" LOSSY 85;
+  image: "0023.png" LOSSY 85;
+  image: "0024.png" LOSSY 85;
+  image: "0025.png" LOSSY 85;
+  image: "0026.png" LOSSY 85;
+  image: "0027.png" LOSSY 85;
+  image: "0028.png" LOSSY 85;
+  image: "0029.png" LOSSY 85;
+  image: "0030.png" LOSSY 85;
+  image: "0031.png" LOSSY 85;
+  image: "0032.png" LOSSY 85;
+  image: "0033.png" LOSSY 85;
+  image: "0034.png" LOSSY 85;
+  image: "0035.png" LOSSY 85;
+  image: "0036.png" LOSSY 85;
+  image: "0037.png" LOSSY 85;
+  image: "0038.png" LOSSY 85;
+  image: "0039.png" LOSSY 85;
+  image: "0040.png" LOSSY 85;
+  image: "0041.png" LOSSY 85;
+  image: "0042.png" LOSSY 85;
+  image: "0043.png" LOSSY 85;
+  image: "0044.png" LOSSY 85;
+  image: "0045.png" LOSSY 85;
+  image: "0046.png" LOSSY 85;
+  image: "0047.png" LOSSY 85;
+  image: "0048.png" LOSSY 85;
+  image: "0049.png" LOSSY 85;
+  image: "0050.png" LOSSY 85;
+  image: "0051.png" LOSSY 85;
+  image: "0052.png" LOSSY 85;
+  image: "0053.png" LOSSY 85;
+  image: "0054.png" LOSSY 85;
+  image: "0055.png" LOSSY 85;
+  image: "0056.png" LOSSY 85;
+  image: "0057.png" LOSSY 85;
+  image: "0058.png" LOSSY 85;
+  image: "0059.png" LOSSY 85;
+  image: "0060.png" LOSSY 85;
+  image: "0061.png" LOSSY 85;
+  image: "0062.png" LOSSY 85;
+  image: "0063.png" LOSSY 85;
+  image: "0064.png" LOSSY 85;
+  image: "0065.png" LOSSY 85;
+}

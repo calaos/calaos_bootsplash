@@ -1,0 +1,14 @@
+/*
+        HECKY Raoul
+        03/05/2007
+        default images
+*/
+
+images
+{
+        /* definition des images */
+        image: "bg.png" COMP;
+        image: "final.png" COMP;
+        image: "shadow.png" FRAME;
+        image: "bloom.png" FRAME;
+}

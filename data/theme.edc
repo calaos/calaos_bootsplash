@@ -1,0 +1,297 @@
+/*
+        HECKY Raoul
+        03/05/2007
+        Calaos bootsplash prototype
+*/
+
+
+fonts
+{
+   font: "Vera.ttf"   "EdjeVera";
+   font: "VeraBd.ttf" "EdjeVeraBold";
+}
+
+//compression ratio
+#define FRAME LOSSY 85
+
+#include "images.edc"
+#include "images/animation.edc"
+
+collections {
+  group {
+    name: "background";
+
+    parts {
+
+      part {
+        name: "back_color";
+        type: RECT;
+        description {
+          state: "default" 0.0;
+          color: 0 0 0 255;
+        }
+      }
+
+      part {
+        name: "background";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          image { normal: "bg.png"; }
+          color: 0 0 0 0;
+        }
+        description {
+          state: "visible" 0.0;
+          inherit: "default" 0.0;
+          color: 255 255 255 255;
+        }
+      }
+
+      part
+      {
+                name: "clip";
+                type: RECT;
+                description
+                {
+                        state: "default" 0.0;
+                        visible: 0;
+                        rel1
+                        {
+                                relative: 0.5  0.5;
+                                offset: -250   -50;
+                        }
+                        rel2
+                        {
+                                relative: 0.5  0.5;
+                                offset: 249    49;
+                        }
+                }
+      }
+
+      part {
+        name: "shadow";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          visible: 0;
+          color: 255 255 255 0;
+          image { normal: "shadow.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+        description {
+          state: "shadowin" 0.0;
+          visible: 1;
+          color: 255 255 255 255;
+          image { normal: "shadow.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+      }
+
+      part {
+        name: "animation";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          image {
+            normal: "0001.png";
+          }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+        description {
+          state: "animationin" 0.0;
+          image {
+            normal: "0065.png";
+            tween: "0001.png";
+            tween: "0002.png";
+            tween: "0003.png";
+            tween: "0004.png";
+            tween: "0005.png";
+            tween: "0006.png";
+            tween: "0007.png";
+            tween: "0008.png";
+            tween: "0009.png";
+            tween: "0010.png";
+            tween: "0011.png";
+            tween: "0012.png";
+            tween: "0013.png";
+            tween: "0014.png";
+            tween: "0015.png";
+            tween: "0016.png";
+            tween: "0017.png";
+            tween: "0018.png";
+            tween: "0019.png";
+            tween: "0020.png";
+            tween: "0021.png";
+            tween: "0022.png";
+            tween: "0023.png";
+            tween: "0024.png";
+            tween: "0025.png";
+            tween: "0026.png";
+            tween: "0027.png";
+            tween: "0028.png";
+            tween: "0029.png";
+            tween: "0030.png";
+            tween: "0031.png";
+            tween: "0032.png";
+            tween: "0033.png";
+            tween: "0034.png";
+            tween: "0035.png";
+            tween: "0036.png";
+            tween: "0037.png";
+            tween: "0038.png";
+            tween: "0039.png";
+            tween: "0040.png";
+            tween: "0041.png";
+            tween: "0042.png";
+            tween: "0043.png";
+            tween: "0044.png";
+            tween: "0045.png";
+            tween: "0046.png";
+            tween: "0047.png";
+            tween: "0048.png";
+            tween: "0049.png";
+            tween: "0050.png";
+            tween: "0051.png";
+            tween: "0052.png";
+            tween: "0053.png";
+            tween: "0054.png";
+            tween: "0055.png";
+            tween: "0056.png";
+            tween: "0057.png";
+            tween: "0058.png";
+            tween: "0059.png";
+            tween: "0060.png";
+            tween: "0061.png";
+            tween: "0062.png";
+            tween: "0063.png";
+            tween: "0064.png";
+            tween: "0065.png";
+          }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+      }
+
+      part {
+        name: "final";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          visible: 0;
+          color: 255 255 255 0;
+          image { normal: "final.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+        description {
+          state: "finalin" 0.0;
+          visible: 1;
+          color: 255 255 255 255;
+          image { normal: "final.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+        description {
+          state: "finalout" 0.0;
+          visible: 0;
+          color: 255 255 255 0;
+          image { normal: "final.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+      }
+
+      part {
+        name: "bloom";
+        type: IMAGE;
+        description {
+          state: "default" 0.0;
+          visible: 0;
+          color: 255 255 255 0;
+          image { normal: "bloom.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+        description {
+          state: "bloomon" 0.0;
+          visible: 1;
+          color: 255 255 255 255;
+          image { normal: "bloom.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+        description {
+          state: "bloomout" 0.0;
+          visible: 0;
+          color: 255 255 255 0;
+          image { normal: "bloom.png"; }
+          rel1.to: "clip";
+          rel2.to: "clip";
+        }
+      }
+    }
+    programs {
+      program {
+        name, "on_show";
+        signal, "show";
+        source, "";
+        action, STATE_SET "visible" 0.0;
+        transition, DECELERATE 0.5;
+        target, "background";
+        after: "animation.in";
+      }
+      program {
+        name, "animation.in";
+        action, STATE_SET "animationin" 0.0;
+        transition, LINEAR 3.0;
+        target, "animation";
+        after: "shadow.in";
+        after: "bloom.in";
+      }
+      program {
+        name, "shadow.in";
+        action, STATE_SET "shadowin" 0.0;
+        transition, SINUSOIDAL 0.3;
+        target, "shadow";
+      }
+      program {
+        name, "bloom.in";
+        in: 0.2 0.0;
+        action, STATE_SET "bloomon" 0.0;
+        transition, ACCELERATE 0.5;
+        target, "bloom";
+        after: "bloom.out";
+        after: "animation.final";
+      }
+      program {
+        name, "bloom.out";
+        action, STATE_SET "bloomout" 0.0;
+        transition, DECELERATE 0.6;
+        target, "bloom";
+      }
+      program {
+        name, "animation.final";
+        in: 0.1 0.0;
+        action, STATE_SET "finalin" 0.0;
+        transition, DECELERATE 2.5;
+        target, "final";
+      }
+      //prog pour remettre a l'etat initial lorsque l'element est "cache"
+      program {
+        name, "animation.reset";
+        signal: "hide";
+        source: "";
+        action, STATE_SET "default" 0.0;
+        transition, LINEAR 0.00001;
+        target, "animation";
+        target, "shadow";
+        target, "bloom";
+        target, "final";
+      }
+    }
+  }
+}
+

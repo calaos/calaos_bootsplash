@@ -1,0 +1,14 @@
+Source: epresent
+Section: x11
+Priority: optional
+Maintainer: Raoul Hecky <raoul.hecky@gmail.com>
+Build-Depends: cdbs, debhelper (>> 3.0.0), automake1.7 | automaken, libecore1-dev, libedje0-dev, libevas1-dev, libemotion0-dev
+Standards-Version: 3.7.2
+
+Package: epresent
+Section: x11
+Architecture: any
+Depends: ${shlibs:Depends}
+Recommends: libemotion0-xine | libemotion0-gstreamer
+Description: EFL powered presentation program
+ ePresent is a tool to make eye-candy presentation based on edje.
