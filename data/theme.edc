@@ -65,6 +65,24 @@ collections {
       }
 
       part {
+        name: "footerclip";
+        type: RECT;
+        description {
+          state: "default" 0.0;
+          visible: 1;
+          color: 48 48 48 0;
+          rel1 { relative: 0.5  0.980; offset: -512  -33;}
+          rel2 { relative: 0.5  0.980; offset: 511   32;}
+        }
+        description {
+          state: "footerclipon" 0.0;
+          color: 48 48 48 255;
+          rel1 { relative: 0.5  0.956; offset: -512  -33;}
+          rel2 { relative: 0.5  0.956; offset: 511   32;}
+        }
+      }
+
+      part {
         name: "logomirrorclip";
         type: RECT;
         description {
@@ -393,6 +411,103 @@ collections {
         }
      }
 
+      part {
+        name, "loadericon";
+        type: IMAGE;
+        description {
+          state, "default" 0.0;
+          visible: 0;
+          rel1 { relative: 0.037  0.508; offset: -21   -19; }
+          rel2 { relative: 0.037  0.508; offset: 20  18; }
+          image { normal:"loader_icon_bg.png";}
+          color: 255 255 255 0;
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+        description {
+          state, "loadericonon" 0.0;
+          visible: 1;
+          rel1 { relative: 0.037  0.508; offset: -21   -19; }
+          rel2 { relative: 0.037  0.508; offset: 20  18; }
+          image { normal:"loader_icon_bg.png";}
+          color: 255 255 255 255;
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+        description {
+          state, "loadericonanim" 0.0;
+          visible: 1;
+          rel1 { relative: 0.037  0.508; offset: -21   -19; }
+          rel2 { relative: 0.037  0.508; offset: 20  18; }
+          color: 255 255 255 255;
+          image {
+            normal: "loader_icon_0025.png";
+            tween: "loader_icon_0001.png";
+            tween: "loader_icon_0002.png";
+            tween: "loader_icon_0003.png";
+            tween: "loader_icon_0004.png";
+            tween: "loader_icon_0005.png";
+            tween: "loader_icon_0006.png";
+            tween: "loader_icon_0007.png";
+            tween: "loader_icon_0008.png";
+            tween: "loader_icon_0009.png";
+            tween: "loader_icon_0010.png";
+            tween: "loader_icon_0011.png";
+            tween: "loader_icon_0012.png";
+            tween: "loader_icon_0013.png";
+            tween: "loader_icon_0014.png";
+            tween: "loader_icon_0015.png";
+            tween: "loader_icon_0016.png";
+            tween: "loader_icon_0017.png";
+            tween: "loader_icon_0018.png";
+            tween: "loader_icon_0019.png";
+            tween: "loader_icon_0020.png";
+            tween: "loader_icon_0021.png";
+            tween: "loader_icon_0022.png";
+            tween: "loader_icon_0023.png";
+            tween: "loader_icon_0024.png";
+          }
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+       description {
+          state, "loadericonout" 0.0;
+          visible: 1;
+          rel1 { relative: 0.037  0.508; offset: -21   -19; }
+          rel2 { relative: 0.037  0.508; offset: 20  18; }
+          color: 255 255 255 255;
+          image {
+            normal: "loader_icon_bg.png";
+            tween: "loader_icon_0024.png";
+            tween: "loader_icon_0023.png";
+            tween: "loader_icon_0022.png";
+            tween: "loader_icon_0021.png";
+            tween: "loader_icon_0020.png";
+            tween: "loader_icon_0019.png";
+            tween: "loader_icon_0018.png";
+            tween: "loader_icon_0017.png";
+            tween: "loader_icon_0016.png";
+            tween: "loader_icon_0015.png";
+            tween: "loader_icon_0014.png";
+            tween: "loader_icon_0013.png";
+            tween: "loader_icon_0012.png";
+            tween: "loader_icon_0011.png";
+            tween: "loader_icon_0010.png";
+            tween: "loader_icon_0009.png";
+            tween: "loader_icon_0008.png";
+            tween: "loader_icon_0007.png";
+            tween: "loader_icon_0006.png";
+            tween: "loader_icon_0005.png";
+            tween: "loader_icon_0004.png";
+            tween: "loader_icon_0003.png";
+            tween: "loader_icon_0002.png";
+            tween: "loader_icon_0001.png";
+          }
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+     }
+
     }
     programs {
       program {
@@ -412,6 +527,7 @@ collections {
         after: "shadow.in";
         after: "bloom.in";
         after: "neon.in";
+        after: "footerclip.in";
       }
       program {
         name, "neon.in";
@@ -441,6 +557,34 @@ collections {
         target, "bloom";
         after: "bloom.out";
         after: "animation.final";
+      }
+      program {
+        name, "footerclip.in";
+        action, STATE_SET "footerclipon" 0.0;
+        transition, DECELERATE 1.0;
+        target, "footerclip";
+        after: "loadericon.in";
+      }
+      program {
+        name, "loadericon.in";
+        action, STATE_SET "loadericonon" 0.0;
+        transition, DECELERATE 0.5;
+        target, "loadericon";
+        after: "loadericon.anim";
+      }
+      program {
+        name, "loadericon.anim";
+        action, STATE_SET "loadericonanim" 0.0;
+        transition, ACCELERATE 0.9;
+        target, "loadericon";
+        after: "loadericon.animout";
+      }
+      program {
+        name, "loadericon.animout";
+        action, STATE_SET "loadericonout" 0.0;
+        transition, DECELERATE 0.9;
+        target, "loadericon";
+        after: "loadericon.anim";
       }
       program {
         name, "bloom.out";
@@ -504,6 +648,7 @@ collections {
         target, "reflect";
         target, "accueil";
         target, "neonlight";
+        target, "footerclip";
       }
     }
   }
