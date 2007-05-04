@@ -7,9 +7,6 @@
 
 fonts
 {
-  font: "calaos_text_bold.ttf" "Calatxtbold";
-  font: "calaos_text.ttf" "Calatxt";
-  font: "calaos_content.ttf" "Calacont";
   font: "calaos_content_bold.ttf" "Calacontbold";
 }
 
@@ -154,23 +151,24 @@ collections {
 
       part {
         name, "version";
-        type, TEXT;
+        type: IMAGE;
         description {
           state, "default" 0.0;
-          rel1 { relative: 0.883  0.20; offset: -20   -13; }
-          rel2 { relative: 0.883  0.20; offset: 19   12; }
-          text { text, "2.0"; font, "Calatxt"; size, 12;}
           visible: 0;
+          rel1 { relative: 0.87  0.2; offset: -16   -4; }
+          rel2 { relative: 0.87  0.2; offset: 15  3; }
+          image { normal:"version.png";}
           color, 255 255 255 0;
           rel1.to: "logoclip";
           rel2.to: "logoclip";
         }
         description {
           state, "versionon" 0.0;
-          rel1 { relative: 0.883  0.20; offset: -20   -13; }
-          rel2 { relative: 0.883  0.20; offset: 19   12; }
-          text { text, "2.0"; font, "Calatxt"; size, 12;}
-          color, 255 255 255 50;
+          visible: 1;
+          rel1 { relative: 0.87  0.2; offset: -16   -4; }
+          rel2 { relative: 0.87  0.2; offset: 15  3; }
+          image { normal:"version.png";}
+          color, 255 255 255 90;
           rel1.to: "logoclip";
           rel2.to: "logoclip";
         }
@@ -372,20 +370,24 @@ collections {
 
       part {
         name, "accueil";
-        type, TEXT;
+        type: IMAGE;
         description {
           state, "default" 0.0;
-          rel2 { relative, 1.0 1.0; offset, 5 75; }
-          text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16;}
-          color, 138 138 138 0;
+          visible: 0;
+          rel1 { relative: 0.505  0.90; offset: -205   -11; }
+          rel2 { relative: 0.505  0.90; offset: 204  10; }
+          image { normal:"logo_tittle.png";}
+          color: 255 255 255 0;
           rel1.to: "logoclip";
           rel2.to: "logoclip";
         }
         description {
           state, "accueilon" 0.0;
-          rel2 { relative, 1.0 1.0; offset, 5 75; }
-          text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16;}
-          color, 138 138 138 255;
+          visible: 1;
+          rel1 { relative: 0.505  0.90; offset: -205   -11; }
+          rel2 { relative: 0.505  0.90; offset: 204  10; }
+          image { normal:"logo_tittle.png";}
+          color: 255 255 255 90;
           rel1.to: "logoclip";
           rel2.to: "logoclip";
         }

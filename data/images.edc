@@ -7,6 +7,8 @@
 images {
   /* definition des images */
   image: "bg.png" COMP;
+  image: "logo_tittle.png" COMP;
+  image: "version.png" COMP;
   image: "final.png" COMP;
   image: "shadow.png" FRAMELOGO;
   image: "bloom.png" FRAMELOGO;
