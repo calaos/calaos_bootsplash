@@ -7,7 +7,7 @@
 
 fonts
 {
-  font: "calaos_content_bold.ttf" "Calacontbold";
+  font: "calaos_content.ttf" "Calacont";
 }
 
 //compression ratio
@@ -412,6 +412,27 @@ collections {
      }
 
       part {
+        name, "kernellog";
+        type: TEXT;
+        description {
+          state, "default" 0.0;
+          visible: 0;
+          color: 106 106 106 0;
+          text { text: "Démarrage ..."; font: "Calacont"; size: 16; min:  1 1; align: 0.1 0.545; } 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+        description {
+          state, "kernellogon" 0.0;
+          visible: 1;
+          color: 106 106 106 255;
+          text { text: "Démarrage ..."; font: "Calacont"; size: 16; min:  1 1; align: 0.08 0.545; } 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+     }
+
+      part {
         name, "loadericon";
         type: IMAGE;
         description {
@@ -571,18 +592,25 @@ collections {
         transition, DECELERATE 0.5;
         target, "loadericon";
         after: "loadericon.anim";
+        after: "kernellog.in";
+      }
+      program {
+        name, "kernellog.in";
+        action, STATE_SET "kernellogon" 0.0;
+        transition, DECELERATE 0.5;
+        target, "kernellog";
       }
       program {
         name, "loadericon.anim";
         action, STATE_SET "loadericonanim" 0.0;
-        transition, ACCELERATE 0.9;
+        transition, ACCELERATE 0.8;
         target, "loadericon";
         after: "loadericon.animout";
       }
       program {
         name, "loadericon.animout";
         action, STATE_SET "loadericonout" 0.0;
-        transition, DECELERATE 0.9;
+        transition, DECELERATE 0.8;
         target, "loadericon";
         after: "loadericon.anim";
       }
@@ -649,6 +677,8 @@ collections {
         target, "accueil";
         target, "neonlight";
         target, "footerclip";
+        target, "loadericon";
+        target, "kernellog";
       }
     }
   }
