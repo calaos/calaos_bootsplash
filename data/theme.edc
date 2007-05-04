@@ -7,16 +7,19 @@
 #define FRAMEEFFECT LOSSY 70
 
 //Timer For Log
-#define SCROLLTIME 1.0
-#define SCROLLIN 0.5
-#define SCROLLOUT 0.4
+#define SCROLLTIME 0.9
+#define SCROLLIN 0.2
+#define SCROLLOUT 0.1
 
 //Font size Log
 #define LOGSIZE 16
 
-//Log Itemp
+//Log Items
 #define LOG1 "Démarrage, chargement des modules du noyau ..."
 #define LOG2 "Montage des systemes de fichiers ..."
+#define LOG3 "Interface réseau ..."
+#define LOG4 "Lancement des services."
+
 
 //Include
 #include "images.edc"
@@ -422,6 +425,81 @@ collections {
      }
 
       part {
+        name, "kernellog2";
+        type: TEXT;
+        description {
+          state, "default" 0.0;
+          visible: 0;
+          color: 106 106 106 0;
+          rel1 { relative: 0.11  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG2; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+        description {
+          state, "kernellog2on" 0.0;
+          visible: 1;
+          color: 106 106 106 255;
+          rel1 { relative: 0.08  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG2; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+     }
+
+      part {
+        name, "kernellog3";
+        type: TEXT;
+        description {
+          state, "default" 0.0;
+          visible: 0;
+          color: 106 106 106 0;
+          rel1 { relative: 0.11  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG3; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+        description {
+          state, "kernellog3on" 0.0;
+          visible: 1;
+          color: 106 106 106 255;
+          rel1 { relative: 0.08  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG3; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+     }
+
+      part {
+        name, "kernellog4";
+        type: TEXT;
+        description {
+          state, "default" 0.0;
+          visible: 0;
+          color: 106 106 106 0;
+          rel1 { relative: 0.11  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG4; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+        description {
+          state, "kernellog4on" 0.0;
+          visible: 1;
+          color: 106 106 106 255;
+          rel1 { relative: 0.08  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG4; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
+     }
+
+      part {
         name, "loadericon";
         type: IMAGE;
         description {
@@ -584,7 +662,6 @@ collections {
         after: "kernellog1.in";
       }
 
-
       program {
         name, "kernellog1.in";
         action, STATE_SET "kernellog1on" 0.0;
@@ -598,6 +675,54 @@ collections {
         action, STATE_SET "default" 0.0;
         transition, ACCELERATE SCROLLOUT;
         target, "kernellog1";
+        after: "kernellog2.in";
+      }
+
+      program {
+        name, "kernellog2.in";
+        action, STATE_SET "kernellog2on" 0.0;
+        transition, DECELERATE SCROLLIN;
+        target, "kernellog2";
+        after: "kernellog2.out";
+      }
+      program {
+        name, "kernellog2.out";
+        in: SCROLLTIME 0.0;
+        action, STATE_SET "default" 0.0;
+        transition, ACCELERATE SCROLLOUT;
+        target, "kernellog2";
+        after: "kernellog3.in";
+      }
+
+      program {
+        name, "kernellog3.in";
+        action, STATE_SET "kernellog3on" 0.0;
+        transition, DECELERATE SCROLLIN;
+        target, "kernellog3";
+        after: "kernellog3.out";
+      }
+      program {
+        name, "kernellog3.out";
+        in: SCROLLTIME 0.0;
+        action, STATE_SET "default" 0.0;
+        transition, ACCELERATE SCROLLOUT;
+        target, "kernellog3";
+        after: "kernellog4.in";
+      }
+
+      program {
+        name, "kernellog4.in";
+        action, STATE_SET "kernellog4on" 0.0;
+        transition, DECELERATE SCROLLIN;
+        target, "kernellog4";
+        after: "kernellog4.out";
+      }
+      program {
+        name, "kernellog4.out";
+        in: SCROLLTIME 0.0;
+        action, STATE_SET "default" 0.0;
+        transition, ACCELERATE SCROLLOUT;
+        target, "kernellog4";
       }
 
       program {
