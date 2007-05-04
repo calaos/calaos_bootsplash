@@ -106,7 +106,7 @@ collections {
           state: "default" 0.0;
           image { normal: "neonlight.png"; }
           fill {
-                origin.relative: 0.0 0.0;
+            origin.relative: 0.0 0.0;
           }
           color: 255 255 255 0;
           rel1.to: "neonclip";
@@ -116,7 +116,7 @@ collections {
           state: "neonon" 0.0;
           image { normal: "neonlight.png"; }
           fill {
-                origin.relative: 1.0 0.0;
+            origin.relative: 1.0 0.0;
           }
           color: 255 255 255 255;
           rel1.to: "neonclip";
@@ -435,7 +435,7 @@ collections {
       program {
         name, "reflect.in";
         action, STATE_SET "reflecton" 0.0;
-        transition, ACCELERATE 0.2;
+        transition, ACCELERATE 0.5;
         target, "reflect";
         after: "reflect.out";
       }
@@ -470,4 +470,3 @@ collections {
     }
   }
 }
-
