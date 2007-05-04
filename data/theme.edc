@@ -9,6 +9,8 @@ fonts
 {
   font: "calaos_text_bold.ttf" "Calatxtbold";
   font: "calaos_text.ttf" "Calatxt";
+  font: "calaos_content.ttf" "Calacont";
+  font: "calaos_content_bold.ttf" "Calacontbold";
 }
 
 //compression ratio
@@ -149,6 +151,30 @@ collections {
           rel2.to: "logoclip";
         }
       }
+
+      part {
+        name, "version";
+        type, TEXT;
+        description {
+          state, "default" 0.0;
+          rel1 { relative: 0.883  0.20; offset: -20   -13; }
+          rel2 { relative: 0.883  0.20; offset: 19   12; }
+          text { text, "2.0"; font, "Calatxt"; size, 12;}
+          visible: 0;
+          color, 255 255 255 0;
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
+        }
+        description {
+          state, "versionon" 0.0;
+          rel1 { relative: 0.883  0.20; offset: -20   -13; }
+          rel2 { relative: 0.883  0.20; offset: 19   12; }
+          text { text, "2.0"; font, "Calatxt"; size, 12;}
+          color, 255 255 255 50;
+          rel1.to: "logoclip";
+          rel2.to: "logoclip";
+        }
+     }
 
       part {
         name: "animation";
@@ -314,6 +340,7 @@ collections {
           rel2.to: "logoclip";
         }
       }
+
       part {
         name: "reflect";
         type: IMAGE;
@@ -342,13 +369,14 @@ collections {
           rel2.to: "logoclip";
         }
       }
+
       part {
         name, "accueil";
         type, TEXT;
         description {
           state, "default" 0.0;
           rel2 { relative, 1.0 1.0; offset, 5 75; }
-          text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16; }
+          text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16;}
           color, 138 138 138 0;
           rel1.to: "logoclip";
           rel2.to: "logoclip";
@@ -356,12 +384,13 @@ collections {
         description {
           state, "accueilon" 0.0;
           rel2 { relative, 1.0 1.0; offset, 5 75; }
-          text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16; }
+          text { text, "a   powerful    home    controler"; font, "Calatxt"; size, 16;}
           color, 138 138 138 255;
           rel1.to: "logoclip";
           rel2.to: "logoclip";
         }
      }
+
     }
     programs {
       program {
@@ -451,6 +480,13 @@ collections {
         action, STATE_SET "accueilon" 0.0;
         transition, DECELERATE 1.0;
         target, "accueil";
+        after: "version.in";
+      }
+      program {
+        name, "version.in";
+        action, STATE_SET "versionon" 0.0;
+        transition, DECELERATE 0.5;
+        target, "version";
       }
       //prog pour remettre a l'etat initial lorsque l'element est "cache"
       program {
