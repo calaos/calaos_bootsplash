@@ -1,21 +1,31 @@
-/*
-        HECKY Raoul
-        03/05/2007
-        Calaos bootsplash prototype
-*/
+// Calaos BootSplash Theme
+// BOEHLER Frederic
+// 02/05/2007
 
+//Compression ratio
+#define FRAMELOGO LOSSY 85
+#define FRAMEEFFECT LOSSY 70
+
+//Timer For Log
+#define SCROLLTIME 1.0
+#define SCROLLIN 0.5
+#define SCROLLOUT 0.4
+
+//Font size Log
+#define LOGSIZE 16
+
+//Log Itemp
+#define LOG1 "Démarrage, chargement des modules du noyau ..."
+#define LOG2 "Montage des systemes de fichiers ..."
+
+//Include
+#include "images.edc"
+#include "animation.edc"
 
 fonts
 {
   font: "calaos_content.ttf" "Calacont";
 }
-
-//compression ratio
-#define FRAMELOGO LOSSY 85
-#define FRAMEEFFECT LOSSY 70
-
-#include "images.edc"
-#include "images/animation.edc"
 
 collections {
   group {
@@ -166,31 +176,6 @@ collections {
           rel2.to: "logoclip";
         }
       }
-
-      part {
-        name, "version";
-        type: IMAGE;
-        description {
-          state, "default" 0.0;
-          visible: 0;
-          rel1 { relative: 0.87  0.2; offset: -16   -4; }
-          rel2 { relative: 0.87  0.2; offset: 15  3; }
-          image { normal:"version.png";}
-          color, 255 255 255 0;
-          rel1.to: "logoclip";
-          rel2.to: "logoclip";
-        }
-        description {
-          state, "versionon" 0.0;
-          visible: 1;
-          rel1 { relative: 0.87  0.2; offset: -16   -4; }
-          rel2 { relative: 0.87  0.2; offset: 15  3; }
-          image { normal:"version.png";}
-          color, 255 255 255 90;
-          rel1.to: "logoclip";
-          rel2.to: "logoclip";
-        }
-     }
 
       part {
         name: "animation";
@@ -412,21 +397,25 @@ collections {
      }
 
       part {
-        name, "kernellog";
+        name, "kernellog1";
         type: TEXT;
         description {
           state, "default" 0.0;
           visible: 0;
           color: 106 106 106 0;
-          text { text: "Démarrage ..."; font: "Calacont"; size: 16; min:  1 1; align: 0.1 0.545; } 
+          rel1 { relative: 0.11  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG1; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
           rel1.to: "footerclip";
           rel2.to: "footerclip";
         }
         description {
-          state, "kernellogon" 0.0;
+          state, "kernellog1on" 0.0;
           visible: 1;
           color: 106 106 106 255;
-          text { text: "Démarrage ..."; font: "Calacont"; size: 16; min:  1 1; align: 0.08 0.545; } 
+          rel1 { relative: 0.08  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG1; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
           rel1.to: "footerclip";
           rel2.to: "footerclip";
         }
@@ -592,14 +581,25 @@ collections {
         transition, DECELERATE 0.5;
         target, "loadericon";
         after: "loadericon.anim";
-        after: "kernellog.in";
+        after: "kernellog1.in";
+      }
+
+
+      program {
+        name, "kernellog1.in";
+        action, STATE_SET "kernellog1on" 0.0;
+        transition, DECELERATE SCROLLIN;
+        target, "kernellog1";
+        after: "kernellog1.out";
       }
       program {
-        name, "kernellog.in";
-        action, STATE_SET "kernellogon" 0.0;
-        transition, DECELERATE 0.5;
-        target, "kernellog";
+        name, "kernellog1.out";
+        in: SCROLLTIME 0.0;
+        action, STATE_SET "default" 0.0;
+        transition, ACCELERATE SCROLLOUT;
+        target, "kernellog1";
       }
+
       program {
         name, "loadericon.anim";
         action, STATE_SET "loadericonanim" 0.0;
@@ -654,15 +654,7 @@ collections {
         action, STATE_SET "accueilon" 0.0;
         transition, DECELERATE 1.0;
         target, "accueil";
-        after: "version.in";
       }
-      program {
-        name, "version.in";
-        action, STATE_SET "versionon" 0.0;
-        transition, DECELERATE 0.5;
-        target, "version";
-      }
-      //prog pour remettre a l'etat initial lorsque l'element est "cache"
       program {
         name, "animation.reset";
         signal: "hide";
@@ -678,7 +670,7 @@ collections {
         target, "neonlight";
         target, "footerclip";
         target, "loadericon";
-        target, "kernellog";
+        target, "kernellog1";
       }
     }
   }
