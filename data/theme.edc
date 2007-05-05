@@ -16,9 +16,9 @@
 
 //Log Items
 #define LOG1 "Démarrage, chargement des modules du noyau ..."
-#define LOG2 "Montage des systemes de fichiers ..."
-#define LOG3 "Interface réseau ..."
-#define LOG4 "Lancement des services."
+#define LOG2 "Montage des systèmes de fichiers ..."
+#define LOG3 "Lancement du réseau ..."
+#define LOG4 "Démarrage des services ..."
 
 
 //Include
