@@ -497,6 +497,16 @@ collections {
           rel1.to: "footerclip";
           rel2.to: "footerclip";
         }
+        description {
+          state, "kernellog4out" 0.0;
+          visible: 1;
+          color: 106 106 106 100;
+          rel1 { relative: 0.08  0.35;}
+          rel2 { relative: 1.0  1.0;}
+          text { text: LOG4; align: 0.0 0.0; font: "Calacont"; size: LOGSIZE;} 
+          rel1.to: "footerclip";
+          rel2.to: "footerclip";
+        }
      }
 
       part {
@@ -720,8 +730,8 @@ collections {
       program {
         name, "kernellog4.out";
         in: SCROLLTIME 0.0;
-        action, STATE_SET "default" 0.0;
-        transition, ACCELERATE SCROLLOUT;
+        action, STATE_SET "kernellog4out" 0.0;
+        transition, ACCELERATE 2.0;
         target, "kernellog4";
       }
 
