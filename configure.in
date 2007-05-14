@@ -85,51 +85,32 @@ fi
 
 # PKG_CHECK_MODULES(SQLITE, sqlite3)
 
-PROG="evas-config";
-AC_PATH_PROG(EVAS_CONFIG, $PROG, "", $PATH)
-if test -z "$EVAS_CONFIG" ; then
-  echo $PROG " is not in your \$PATH. Please ensure it is.";
-  echo "Read the manual page for you shell as to how to extend your path.";
-  AC_MSG_ERROR(Cannot find $PROG)
-fi
-evas_libs=`$EVAS_CONFIG --libs`
-evas_cflags=`$EVAS_CONFIG --cflags`
+PKG_CHECK_MODULES(EVAS, [evas >= 0.9.9])
+evas_cflags=`pkg-config --cflags evas`
+evas_libs=`pkg-config --libs evas`
 AC_SUBST(evas_libs)
 AC_SUBST(evas_cflags)
-
-PROG="ecore-config";
-AC_PATH_PROG(ECORE_CONFIG, $PROG, "", $PATH)
-if test -z "$ECORE_CONFIG" ; then
-  echo $PROG " is not in your \$PATH. Please ensure it is.";
-  echo "Read the manual page for you shell as to how to extend your path.";
-  AC_MSG_ERROR(Cannot find $PROG)
-fi
-ecore_libs=`$ECORE_CONFIG --libs`
-ecore_cflags=`$ECORE_CONFIG --cflags`
+PKG_CHECK_MODULES(ECORE, [
+  ecore >= 0.9.9
+  ecore-evas >= 0.9.9
+  ecore-file >= 0.9.9
+  ecore-ipc >= 0.9.9
+  ecore-config >= 0.9.9
+  ecore-desktop >= 0.9.9
+])
+ecore_cflags=`pkg-config --cflags ecore`
+ecore_libs=`pkg-config --libs ecore`
 AC_SUBST(ecore_libs)
 AC_SUBST(ecore_cflags)
-
-PROG="edje-config";
-AC_PATH_PROG(EDJE_CONFIG, $PROG, "", $PATH)
-if test -z "$EDJE_CONFIG" ; then
-  echo $PROG " is not in your \$PATH. Please ensure it is.";
-  echo "Read the manual page for you shell as to how to extend your path.";
-  AC_MSG_ERROR(Cannot find $PROG)
-fi
-edje_libs=`$EDJE_CONFIG --libs`
-edje_cflags=`$EDJE_CONFIG --cflags`
+PKG_CHECK_MODULES(EDJE, [edje >= 0.5.0])
+edje_cflags=`pkg-config --cflags edje`
+edje_libs=`pkg-config --libs edje`
 AC_SUBST(edje_libs)
 AC_SUBST(edje_cflags)
 
-PROG="emotion-config";
-AC_PATH_PROG(EMOTION_CONFIG, $PROG, "", $PATH)
-if test -z "$EMOTION_CONFIG" ; then
-  echo $PROG " is not in your \$PATH. Please ensure it is.";
-  echo "Read the manual page for you shell as to how to extend your path.";
-  AC_MSG_ERROR(Cannot find $PROG)
-fi
-emotion_libs=`$EMOTION_CONFIG --libs`
-emotion_cflags=`$EMOTION_CONFIG --cflags`
+PKG_CHECK_MODULES(EMOTION, [emotion >= 0.0.1])
+emotion_cflags=`pkg-config --cflags emotion`
+emotion_libs=`pkg-config --libs emotion`
 AC_SUBST(emotion_libs)
 AC_SUBST(emotion_cflags)
 
