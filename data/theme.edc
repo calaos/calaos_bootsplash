@@ -5,6 +5,7 @@
 //Compression ratio
 #define FRAMELOGO LOSSY 85
 #define FRAMEEFFECT LOSSY 70
+#define FRAMELOADER LOSSY 95
 
 //Timer For Log
 #define SCROLLTIME 0.9

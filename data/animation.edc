@@ -71,31 +71,31 @@ images {
 }
 
 images {
-  image: "loader_icon_0001.png" FRAMELOGO;
-  image: "loader_icon_0002.png" FRAMELOGO;
-  image: "loader_icon_0003.png" FRAMELOGO;
-  image: "loader_icon_0004.png" FRAMELOGO;
-  image: "loader_icon_0005.png" FRAMELOGO;
-  image: "loader_icon_0006.png" FRAMELOGO;
-  image: "loader_icon_0007.png" FRAMELOGO;
-  image: "loader_icon_0008.png" FRAMELOGO;
-  image: "loader_icon_0009.png" FRAMELOGO;
-  image: "loader_icon_0010.png" FRAMELOGO;
-  image: "loader_icon_0011.png" FRAMELOGO;
-  image: "loader_icon_0012.png" FRAMELOGO;
-  image: "loader_icon_0013.png" FRAMELOGO;
-  image: "loader_icon_0014.png" FRAMELOGO;
-  image: "loader_icon_0015.png" FRAMELOGO;
-  image: "loader_icon_0016.png" FRAMELOGO;
-  image: "loader_icon_0017.png" FRAMELOGO;
-  image: "loader_icon_0018.png" FRAMELOGO;
-  image: "loader_icon_0019.png" FRAMELOGO;
-  image: "loader_icon_0020.png" FRAMELOGO;
-  image: "loader_icon_0021.png" FRAMELOGO;
-  image: "loader_icon_0022.png" FRAMELOGO;
-  image: "loader_icon_0023.png" FRAMELOGO;
-  image: "loader_icon_0024.png" FRAMELOGO;
-  image: "loader_icon_0025.png" FRAMELOGO;
+  image: "loader_icon_0001.png" FRAMELOADER;
+  image: "loader_icon_0002.png" FRAMELOADER;
+  image: "loader_icon_0003.png" FRAMELOADER;
+  image: "loader_icon_0004.png" FRAMELOADER;
+  image: "loader_icon_0005.png" FRAMELOADER;
+  image: "loader_icon_0006.png" FRAMELOADER;
+  image: "loader_icon_0007.png" FRAMELOADER;
+  image: "loader_icon_0008.png" FRAMELOADER;
+  image: "loader_icon_0009.png" FRAMELOADER;
+  image: "loader_icon_0010.png" FRAMELOADER;
+  image: "loader_icon_0011.png" FRAMELOADER;
+  image: "loader_icon_0012.png" FRAMELOADER;
+  image: "loader_icon_0013.png" FRAMELOADER;
+  image: "loader_icon_0014.png" FRAMELOADER;
+  image: "loader_icon_0015.png" FRAMELOADER;
+  image: "loader_icon_0016.png" FRAMELOADER;
+  image: "loader_icon_0017.png" FRAMELOADER;
+  image: "loader_icon_0018.png" FRAMELOADER;
+  image: "loader_icon_0019.png" FRAMELOADER;
+  image: "loader_icon_0020.png" FRAMELOADER;
+  image: "loader_icon_0021.png" FRAMELOADER;
+  image: "loader_icon_0022.png" FRAMELOADER;
+  image: "loader_icon_0023.png" FRAMELOADER;
+  image: "loader_icon_0024.png" FRAMELOADER;
+  image: "loader_icon_0025.png" FRAMELOADER;
 }
 
 images {
