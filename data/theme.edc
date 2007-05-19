@@ -68,11 +68,11 @@ collections {
           state: "default" 0.0;
           visible: 0;
           rel1 {
-            relative: 0.5  0.393;
+            relative: 0.5  0.459;
             offset: -250   -50;
           }
           rel2 {
-            relative: 0.5  0.393;
+            relative: 0.5  0.459;
             offset: 249    49;
           }
         }
@@ -84,13 +84,13 @@ collections {
         description {
           state: "default" 0.0;
           visible: 1;
-          color: 48 48 48 0;
+          color: 0 0 0 0;
           rel1 { relative: 0.5  0.980; offset: -512  -33;}
           rel2 { relative: 0.5  0.980; offset: 511   32;}
         }
         description {
           state: "footerclipon" 0.0;
-          color: 48 48 48 255;
+          color: 0 0 0 0;
           rel1 { relative: 0.5  0.956; offset: -512  -33;}
           rel2 { relative: 0.5  0.956; offset: 511   32;}
         }
@@ -103,11 +103,11 @@ collections {
           state: "default" 0.0;
           visible: 0;
           rel1 {
-            relative: 0.5  0.490;
+            relative: 0.5  0.556;
             offset: -250   -50;
           }
           rel2 {
-            relative: 0.5  0.490;
+            relative: 0.5  0.556;
             offset: 249    49;
           }
         }
@@ -120,11 +120,11 @@ collections {
           state: "default" 0.0;
           visible: 0;
           rel1 {
-            relative: 0.5  0.390;
+            relative: 0.5  0.456;
             offset: -512   0;
           }
           rel2 {
-            relative: 0.5  0.390;
+            relative: 0.5  0.456;
             offset: 511    4;
           }
         }
