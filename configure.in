@@ -94,9 +94,6 @@ PKG_CHECK_MODULES(ECORE, [
   ecore >= 0.9.9
   ecore-evas >= 0.9.9
   ecore-file >= 0.9.9
-  ecore-ipc >= 0.9.9
-  ecore-config >= 0.9.9
-  ecore-desktop >= 0.9.9
 ])
 ecore_cflags=`pkg-config --cflags ecore`
 ecore_libs=`pkg-config --libs ecore`
