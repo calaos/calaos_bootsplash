@@ -1,0 +1,144 @@
+In file included from /Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:22:
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:25:19: error: Utils.h: No such file or directory
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:26:19: error: Mutex.h: No such file or directory
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:28:27: error: sigc++/sigc++.h: No such file or directory
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:29:19: error: Ecore.h: No such file or directory
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:35: error: expected namespace-name before ';' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:35: error: '<type error>' is not a namespace
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:46: error: ISO C++ forbids declaration of 'DeletorBase' with no type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:46: error: expected ';' before '*' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:50: error: 'DeletorBase' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h: In constructor 'IPCData::IPCData()':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:48: error: class 'IPCData' does not have any field named 'destroy'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h: In constructor 'IPCData::IPCData(void*, int*)':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:50: error: class 'IPCData' does not have any field named 'destroy'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h: At global scope:
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:57: error: field 'source' has incomplete type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:58: error: field 'emission' has incomplete type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h: In constructor 'IPCMsg::IPCMsg()':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:63: error: class 'IPCMsg' does not have any field named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:63: error: class 'IPCMsg' does not have any field named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h: At global scope:
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:70: error: field 'source' has incomplete type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:71: error: field 'emission' has incomplete type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:73: error: 'sigc' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:73: error: ISO C++ forbids declaration of 'signal' with no type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:73: error: expected ';' before '<' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:84: error: ISO C++ forbids declaration of 'Ecore_Fd_Handler' with no type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:84: error: expected ';' before '*' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:85: error: 'Mutex' does not name a type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:87: error: ISO C++ forbids declaration of 'list' with no type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:87: error: expected ';' before '<' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:88: error: ISO C++ forbids declaration of 'list' with no type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:88: error: expected ';' before '<' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:112: error: 'sigc' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:112: error: 'signal' is not a type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:112: error: expected ',' or '...' before '<' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:114: error: 'sigc' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:114: error: 'signal' is not a type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.h:114: error: expected ',' or '...' before '<' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: In constructor 'IPC::IPC()':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:34: error: class 'IPC' does not have any field named 'mutex'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: At global scope:
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:65: error: 'sigc' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:65: error: 'signal' is not a type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:65: error: expected ',' or '...' before '<' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: In member function 'void IPC::AddHandler(std::string, std::string, int)':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:65: error: 'source' has incomplete type
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/usr/include/c++/4.0.0/bits/stringfwd.h:56: error: declaration of 'struct std::string'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:65: error: 'emission' has incomplete type
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/usr/include/c++/4.0.0/bits/stringfwd.h:56: error: declaration of 'struct std::string'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:68: error: 'class IPCSignal' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:69: error: 'class IPCSignal' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:70: error: 'data' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:71: error: 'class IPCSignal' has no member named 'signal'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:73: error: 'signals' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: At global scope:
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: 'sigc' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: variable or field 'DeleteHandler' declared void
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: 'int IPC::DeleteHandler' is not a static member of 'class IPC'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: expected primary-expression before 'void'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: expected primary-expression before ',' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: expected primary-expression before ',' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: expected primary-expression before 'void'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: expected primary-expression before 'void'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:76: error: initializer expression list treated as compound expression
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:77: error: expected ',' or ';' before '{' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: In member function 'void IPC::SendEvent(std::string, std::string, void*)':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:90: error: 'source' has incomplete type
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/usr/include/c++/4.0.0/bits/stringfwd.h:56: error: declaration of 'struct std::string'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:90: error: 'emission' has incomplete type
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/usr/include/c++/4.0.0/bits/stringfwd.h:56: error: declaration of 'struct std::string'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:93: error: 'class IPCMsg' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:94: error: 'class IPCMsg' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:98: error: 'mutex' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:99: error: 'events' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:108: error: variable 'std::string s' has initializer but incomplete type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:111: error: 'Utils' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:111: error: 'logger' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:111: error: 'Priority' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:111: error: 'ERROR' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:111: error: 'log4cpp' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:111: error: 'eol' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: In member function 'void IPC::SendEvent(std::string, std::string, IPCData, bool)':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:116: error: 'source' has incomplete type
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/usr/include/c++/4.0.0/bits/stringfwd.h:56: error: declaration of 'struct std::string'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:116: error: 'emission' has incomplete type
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/usr/include/c++/4.0.0/bits/stringfwd.h:56: error: declaration of 'struct std::string'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:119: error: 'class IPCMsg' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:120: error: 'class IPCMsg' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:125: error: 'mutex' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:126: error: 'events' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:135: error: variable 'std::string s' has initializer but incomplete type
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:138: error: 'Utils' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:138: error: 'logger' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:138: error: 'Priority' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:138: error: 'ERROR' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:138: error: 'log4cpp' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:138: error: 'eol' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp: In member function 'void IPC::BroadcastEvent()':
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:152: error: 'events' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:159: error: 'mutex' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:160: error: 'list' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:160: error: expected primary-expression before '>' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:160: error: missing template arguments before 'itd'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:160: error: expected `;' before 'itd'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:161: error: 'itd' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:163: error: 'itd' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:167: error: 'Utils' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:167: error: 'logger' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:167: error: 'Priority' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:167: error: 'DEBUG' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:168: error: 'class IPCMsg' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:168: error: 'class IPCMsg' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:168: error: 'to_string' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:168: error: 'log4cpp' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:168: error: 'eol' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:169: error: expected primary-expression before '>' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:169: error: missing template arguments before 'it'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:169: error: expected `;' before 'it'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:174: error: expected primary-expression before '>' token
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:174: error: 'signalsCopy' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:174: error: 'signals' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:176: error: 'it' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:178: error: 'class IPCMsg' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:179: error: 'class IPCMsg' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:181: error: 'class IPCMsg' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:181: error: 'class IPCMsg' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:189: error: 'class IPCData' has no member named 'destroy'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:191: error: 'class IPCData' has no member named 'destroy'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:192: error: 'class IPCData' has no member named 'destroy'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:196: error: 'Utils' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:196: error: 'Priority' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:196: error: 'ERROR' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:197: error: 'class IPCMsg' has no member named 'source'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:197: error: 'class IPCMsg' has no member named 'emission'
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:198: error: 'log4cpp' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:206: error: 'Utils' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:206: error: 'logger' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:206: error: 'Priority' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:206: error: 'ERROR' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:206: error: 'log4cpp' has not been declared
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:206: error: 'eol' was not declared in this scope
+/Users/raoul/iphone/CalaosHome/CalaosHome/CalaosHome/IPC.cpp:65: confused by earlier errors, bailing out
+{standard input}:43:FATAL:.abort  detected.  Assembly stopping.
