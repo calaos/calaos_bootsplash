@@ -95,8 +95,8 @@ PKG_CHECK_MODULES(ECORE, [
   ecore-evas >= 0.9.9
   ecore-file >= 0.9.9
 ])
-ecore_cflags=`pkg-config --cflags ecore`
-ecore_libs=`pkg-config --libs ecore`
+ecore_cflags=`pkg-config --cflags ecore ecore-evas`
+ecore_libs=`pkg-config --libs ecore ecore-evas`
 AC_SUBST(ecore_libs)
 AC_SUBST(ecore_cflags)
 PKG_CHECK_MODULES(EDJE, [edje >= 0.5.0])
