@@ -31,7 +31,7 @@
 #include <string>
 #include <iostream>
 //-----------------------------------------------------------------------------
-int app_signal_exit(void *data, int type, void *event);
+Eina_Bool app_signal_exit(void *data, int type, void *event);
 void resize_cb(Ecore_Evas *ee);
 void signalcontrol_cb(void *data, Evas_Object *o, const char *sig, const char *src);
 //-----------------------------------------------------------------------------

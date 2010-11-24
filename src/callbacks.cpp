@@ -25,7 +25,7 @@
 using namespace std;
 //-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
-int app_signal_exit(void *data, int type, void *event)
+Eina_Bool app_signal_exit(void *data, int type, void *event)
 {
         cout << "Exit called, shutting down..." << endl;
         EApplication::Instance().Stop();
