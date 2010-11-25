@@ -23,7 +23,6 @@
 #define CALLBACKS_H
 //-----------------------------------------------------------------------------
 #include <Evas.h>
-#include <Emotion.h>
 #include <Ecore.h>
 #include <Ecore_X.h>
 #include <Ecore_Evas.h>
