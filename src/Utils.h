@@ -22,6 +22,7 @@
 #ifndef CUTILS_H
 #define CUTILS_H
 //-----------------------------------------------------------------------------
+#include <stdio.h>
 #include <string>
 #include <sstream>
 #include <iostream>
